@@ -57,7 +57,7 @@ fn raymarch(
             return RayMarchResult(0.0, i, h_prev);
         }
 
-        let scene_dist = bilinearSample(0, sdf_in, sdf_in_sampler, uv);
+        let scene_dist = bilinearSampleR(sdf_in, sdf_in_sampler, uv);
         if (scene_dist <= min_sdf) {
             return RayMarchResult(0.0, i, h_prev);
         }
@@ -126,7 +126,7 @@ fn main(@builtin(global_invocation_id) invocation_id: vec3<u32>) {
 
     let r_bias = 4.0;
     let r_step = 14.0;
-    let k_max  = 3;
+    let k_max  = 0;
 
     for (var k = 1; k <= k_max; k++) {
 

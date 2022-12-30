@@ -125,7 +125,7 @@ fn setup(
             };
 
         let base = LightSource {
-            falloff: Vec3::new(10., 10., 0.05),
+            falloff: Vec3::new(5., 5., 0.02),
             intensity: 10.0,
             ..default()
         };
@@ -135,7 +135,7 @@ fn setup(
             -512.,
             "left",
             LightSource {
-                intensity: 6.0,
+                intensity: 10.0,
                 color: Color::rgb_u8(255, 255, 0),
                 jitter_intensity: 1.0,
                 jitter_translation: 2.0,
@@ -148,7 +148,7 @@ fn setup(
             -512.,
             "right",
             LightSource {
-                intensity: 6.0,
+                intensity: 10.0,
                 color: Color::rgb_u8(0, 255, 255),
                 jitter_intensity: 1.0,
                 jitter_translation: 2.0,
